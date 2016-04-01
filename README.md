@@ -1,2 +1,3 @@
 # useful-code
-Collection of various scss, html templates, ngDirectives, ngFilters that will be useful again at some point.
+
+Place to store code that I'll want again.
