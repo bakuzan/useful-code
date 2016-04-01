@@ -1,0 +1,273 @@
+@import "steps.css";
+@import "text.css";
+@import "box-model.css";
+@import "_project-variables.scss";
+
+
+/**
+    Project specific CSS goes in here.
+    See the above import statements for useful helper classes.
+    */
+
+.white-text {
+    color: #FFF;
+}
+.white-background {
+    background-color: #FFF;
+}
+.primary-blue-text {
+    color: $primary-blue;
+}
+.primary-blue-background {
+    background-color: $primary-blue;
+}
+
+.grey-border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.grey-border {
+    border: 1px solid $dark-grey;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/** TEMPLATE WIZARD **/
+
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+    z-index: 1100;
+}
+
+.field-count {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    margin: 10px;
+    font-size: 11px;
+}
+
+//For Black md-checkbox:checked:
+md-checkbox.black.md-checked .md-ink-ripple {
+    color: rgb(0, 0, 0);
+}
+md-checkbox.black.md-checked .md-icon {
+    background-color: rgb(0, 0, 0);
+}
+//For Blue md-checkbox:checked:
+md-checkbox.blue.md-checked .md-ink-ripple {
+    color: $primary-blue;
+}
+md-checkbox.blue.md-checked .md-icon {
+    background-color: $primary-blue;
+}
+
+table#template-wizard-field-table {
+    select {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+    input {
+        background-color: transparent;
+        width: 100%;
+        border: none;
+    }
+}
+
+.scroll-table-container {
+    height: 800px;
+}
+
+.step-inner-vertical-scroll {
+    max-height: 60vh;
+    -ms-overflow-style: scrollbar;
+    overflow-y: auto;
+}
+
+.drag-drop-zone {
+    position: relative;
+    min-height: 100px;
+    border: 1px solid #FFF;
+}
+
+.drag-drop-zone-text {
+    line-height: 100px;
+    text-align: center;
+}
+
+md-list[dnd-list].available-choice-fields .dndPlaceholder,
+md-list[dnd-list].drag-drop-zone .dndPlaceholder {
+    display: block;
+    background-color: #ddd;
+    min-height: 40px;
+}
+
+md-list[dnd-list].available-choice-fields md-list-item.dndDraggingSource,
+md-list[dnd-list].drag-drop-zone md-list-item.dndDraggingSource {
+    display: none;
+}
+
+md-input-container[dnd-list].drag-drop-zone .dndPlaceholder,
+div[dnd-list].calculation-area .dndPlaceholder {
+    display: none;
+    list-style-type: none;
+}
+
+.group-remove-field {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    margin-right: -50px;
+}
+
+.calculation-area {
+    @extend .drag-drop-zone;
+    display: inline-block;
+    min-height: 30px;
+    height: auto;
+    color: #FF0000;
+    font-weight: 600;
+    border-bottom: 1px solid $dark-grey;
+    &:focus {
+        border-bottom: 2px solid $material-blue;
+    }
+}
+
+.calculation-field-chip {
+    position: relative;
+    top: -2px;
+    height: auto;
+    line-height: 20px;
+    background-color: $dark-grey;
+    color: #FFF;
+    border: 2px solid $dark-grey;
+    border-radius: 7px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    i.material-icons {
+        position: relative;
+        font-size: 15px;
+        color: $dark-grey;
+    }
+    &:hover {
+        i.material-icons {
+            color: #FFF;
+        }
+    }
+}
+
+.md-open-menu-container {
+    z-index: 1100;
+}
+
+.calculation-area .calculation-field-chip .md-menu button {
+    height: 30px;
+    min-width: 100px;
+    width: auto;
+    line-height: 20px;
+    border-radius: 0;
+    text-transform: none;
+}
+
+md-menu#functions-menu {
+    position: relative;
+    padding: 0;
+    button.md-icon-button {
+        min-width: 48px;
+        width: auto;
+        min-height: 20px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px;
+        padding: 0 5px;
+        border-radius: 2px;
+        i.material-icons {
+            margin-top: 0;
+            font-size: 18px;
+        }
+    }
+}
+
+/** TEMPLATE WIZARD END **/
+
+/** REPORT PAGE **/
+
+.card.layout-row {
+    min-height: 40px;
+    height: 40px;
+    max-height: 80px;
+    border-radius: 5px;
+    margin: 2px 0;
+    .card-header {
+        min-width: 70px;
+        width: 70px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
+.card.card-tall {
+    min-height: 130px;
+    height: 130px;
+    max-height: 150px;
+    border-radius: 5px;
+    .card-header {
+        min-width: 60px;
+        width: 60px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
+
+md-checkbox[aria-label=" "] {
+    div.md-label {
+        display: none;
+    }
+}
+
+div#accordion {
+    a.btn-link {
+        i.collapse-toggle-collapse {
+            display: none;
+        }
+    }
+    a.btn-link[aria-expanded="false"] {
+        i.collapse-toggle-collapse {
+            display: none;
+        }
+    }
+    a.btn-link[aria-expanded="true"] {
+        i.collapse-toggle-expand {
+            display: none;
+        }
+        i.collapse-toggle-collapse {
+            display: inline-block;
+        }
+    }
+
+    div.panel-heading-material-style {
+        background-color: #FFF;
+    }
+
+    .lfDragAndDrop ul[dnd-list] li.lv-item-material-style {
+        padding: 7px 5px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-color: #FFF;
+        border-bottom-color: #ddd;
+        &:first-child {
+            border-top-color: #ddd;
+        }
+    }
+}
+
+.md-button.md-fab.collapse-action {
+    position: relative;
+    left: 50%;
+    margin-top: -35px;
+    .material-icons {
+        padding: 3px;
+        margin-top: 10px;
+    }
+}

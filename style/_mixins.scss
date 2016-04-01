@@ -1,0 +1,37 @@
+@mixin transition($transition) {
+    -webkit-transition: $transition;
+         -o-transition: $transition;
+       -moz-transition: $transition;
+            transition: $transition;
+}
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform:    $transform;
+    transform:         $transform; 
+}
+@mixin msfilter($filter) {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(" + $filter +")";
+          filter: "progid:DXImageTransform.Microsoft.Alpha(" + $filter + ")";
+}
+@mixin box-shadow($w, $h, $d, $colour) {
+ -webkit-box-shadow: $w $h $d $colour;
+    -moz-box-shadow: $w $h $d $colour;
+         box-shadow: $w $h $d $colour;
+}
+@mixin backface($back) {
+    -webkit-backface-visibility: $back;
+       -moz-backface-visibility: $back;
+            backface-visibility: $back;
+}
+@mixin popout-shadow() {
+    @include box-shadow(0, 2px, 100px, rgba(0, 0, 0, 0.2));
+    @include transition(all 250ms);
+    @include backface(hidden);
+}
+@mixin shade-adjuster($property, $colour) {
+    @if lightness($colour) < 50% {
+        #{$property}: #FFF;
+    } @else {
+        #{$property}: #000;
+    }
+}

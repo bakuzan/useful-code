@@ -1,0 +1,168 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/**
+ * Disable space tooltip
+ */
+
+/* Base styles for the disable space tootip */
+
+.disable-space-warning {
+    position: relative;
+    display: block;
+    @include transition(opacity .5s ease-out);
+}
+
+/* Base styles for the entire tooltip */
+.disable-space-warning:before,
+.disable-space-warning:after {
+    position: absolute;
+    visibility: hidden;
+    @include msfilter("Opacity=0");
+    opacity: 0;
+  -webkit-transition: 
+      opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -webkit-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    -moz-transition:    
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        -moz-transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+    transition:         
+        opacity 0.2s ease-in-out,
+        visibility 0.2s ease-in-out,
+        transform 0.2s cubic-bezier(0.71, 1.7, 0.77, 1.24);
+  @include transform(translate3d(0, 0, 0));
+  pointer-events: none;
+}
+
+/* Show the entire tooltip on hover and focus */
+.disable-space-warning.block-space:before,
+.disable-space-warning.block-space:after {
+  visibility: visible;
+  @include msfilter("Opacity=100");
+  opacity: 1;
+}
+
+/* Base styles for the tooltip's directional arrow */
+.disable-space-warning:before {
+  z-index: 1001;
+  border: 6px solid transparent;
+  background: transparent;
+  content: "";
+}
+
+/* Base styles for the tooltip's content area */
+.disable-space-warning:after {
+  z-index: 1000;
+  padding: 8px;
+  width: 160px;
+  background-color: #000;
+  background-color: hsla(0, 0%, 20%, 0.9);
+  color: #fff;
+  content: "Spaces are not allowed in field alias.";
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Directions */
+
+/* Top (default) */
+.disable-space-warning:before,
+.disable-space-warning:after {
+  bottom: 100%;
+  left: 50%;
+}
+
+.disable-space-warning:before {
+  margin-left: -6px;
+  margin-bottom: -12px;
+  border-top-color: #000;
+  border-top-color: hsla(0, 0%, 20%, 0.9);
+}
+
+/* Horizontally align top/bottom tooltips */
+.disable-space-warning:after {
+  margin-left: -80px;
+}
+
+.disable-space-warning.block-space:before,
+.disable-space-warning.block-space:after {
+  @include transform(translateY(-12px));
+}
+
+/* Left */
+.disable-space-left:before,
+.disable-space-left:after {
+  right: 100%;
+  bottom: 50%;
+  left: auto;
+}
+
+.disable-space-left:before {
+  margin-left: 0;
+  margin-right: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-left-color: #000;
+  border-left-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.disable-space-left.block-space:before,
+.disable-space-left.block-space:after {
+  @include transform(translateX(-12px)); 
+}
+
+/* Bottom */
+.disable-space-bottom:before,
+.disable-space-bottom:after {
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+}
+
+.disable-space-bottom:before {
+  margin-top: -12px;
+  margin-bottom: 0;
+  border-top-color: transparent;
+  border-bottom-color: #000;
+  border-bottom-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.disable-space-bottom.block-space:before,
+.disable-space-bottom.block-space:after {
+  @include transform(translateY(12px));
+}
+
+/* Right */
+.disable-space-right:before,
+.disable-space-right:after {
+  bottom: 50%;
+  left: 100%;
+}
+
+.disable-space-right:before {
+  margin-bottom: 0;
+  margin-left: -12px;
+  border-top-color: transparent;
+  border-right-color: #000;
+  border-right-color: hsla(0, 0%, 20%, 0.9);
+}
+
+.disable-space-right.block-space:before,
+.disable-space-right.block-space:after {
+  @include transform(translateX(12px));
+}
+
+/* Move directional arrows down a bit for left/right tooltips */
+.disable-space-left:before,
+.disable-space-right:before {
+  top: 3px;
+}
+
+/* Vertically center tooltip content for left/right tooltips */
+.disable-space-left:after,
+.disable-space-right:after {
+  margin-left: 0;
+  margin-bottom: -16px;
+}

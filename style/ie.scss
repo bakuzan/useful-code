@@ -1,0 +1,55 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/** IE is so special it gets its own stylesheet.
+    */
+html.ieexplorer {
+    
+    .step-inner-vertical-scroll {
+        min-height: 200px;
+    }
+
+    .calculation-container {
+        min-height: 100px;
+        padding: 25px 0;
+        margin: 25px 0; 
+        &:first-child {
+            padding: 0 0 25px;
+            margin: 0 0 25px;
+        }
+    }
+
+    table#template-wizard-field-table {
+        select::-ms-expand {
+            display: none;
+        }
+    }
+
+    //Scroll on hover doesn't work in IE.
+    .overflow-auto-hover {
+        &:hover {
+            -ms-overflow-style: scrollbar;
+            overflow: auto;
+        }
+    }
+
+    .responsive-override {
+        .ag-body-viewport {
+            -ms-overflow-style: scrollbar;
+            -ms-overflow-x: hidden;
+            overflow: auto;
+        }
+    }
+
+    md-menu.field-context-menu {
+        button.context-menu-button {
+            a {
+                i {
+                    top: 3px;
+                }
+            }
+    }
+}
+
+
+}

@@ -1,0 +1,43 @@
+        .directive('selectOptionsOnDemand', ['$compile', function ($compile) {
+            return {
+                restrict: 'A',
+                link: function (scope, element, attrs) {
+                    var parentId = element.id,
+                        aggs = $compile('<select ng-model="row.agg" id="' + 'select-' + parentId + '">' +
+                                        '<option ng-selected="row.agg === option.name" ng-repeat="option in fieldsTable.aggs track by option.value" value="{{option.value}}">' +
+                                            '{{option.display}}' +
+                                        '</option>' +
+                                     '</select>')(scope),
+                                     formats = $compile('<select ng-model="row.format" id="' + 'select-' + parentId + '">' +
+                                        '<option ng-selected="row.format === option.name" ng-repeat="option in fieldsTable.dataFormats track by option.name" value="{{option.name}}">' +
+                                            '{{option.name}}' +
+                                         '</option>' +
+                                     '</select>')(scope),
+                                     filters = $compile('<select ng-model="row.filter" id="' + 'select-' + parentId + '">' +
+                                        '<option ng-selected="row.filter === option.name" ng-repeat="option in fieldsTable.filters track by option.name" value="{{option.name}}">' +
+                                            '{{option.name}}' +
+                                        '</option>' +
+                                    '</select>')(scope);
+                    
+                    element.bind('click', function (event) {
+                        var type = attrs.selectOptionsOnDemand.toLowerCase();
+                        switch (type) {
+                            case 'aggs':
+                                angular.element(element).html(aggs);
+                                break;
+
+                            case 'dataformats':
+                                angular.element(element).html(formats);
+                                break;
+
+                            case 'filters':
+                                angular.element(element).html(filters);
+                                break;
+                        };
+                        element.unbind('click');
+                        var select = document.getElementById('select-' + parentId);
+                        select.click();
+                    });
+                }
+            };
+        }]);

@@ -1,0 +1,80 @@
+/* For general variables only.
+    Variables unique to this project go in _project-variables.scss;
+    */
+
+$accent-color: #E91E63;
+$primary-color: #3F51B5;
+$header-container-colour: #3F51B5;
+$header-headline-font-color: #FFF;
+
+// Table Variables
+// ---------------------
+$table-header-font-weight:      400;
+$table-header-bg-color:         $header-container-colour;
+$table-header-font-color:       $header-headline-font-color;
+$table-font-color-hover:        #FFF;
+$table-font-color-responsive:   #000; //for the data-title displayed text under 768px.
+
+$table-cell-padding:                    1.6rem;
+$table-condensed-cell-padding:          $table-cell-padding/2;
+$table-super-condensed-cell-padding:    $table-condensed-cell-padding/2;
+
+
+$table-bg:                      #fff;
+$table-bg-accent:               #f5f5f5;
+$table-bg-hover:                $accent-color;
+$table-bg-active:               $table-bg-hover;
+$table-border-color:            #e0e0e0;
+
+//when table row is selected colours.
+$table-bg-selected:                $table-bg-hover;
+$table-font-color-selected:        $table-font-color-hover;
+
+//Card Table
+$card-table-bg:                 #FFF;
+$card-table-font-color:         #000;
+
+//Layout break points:
+$break-lg:      1200px;
+$break-md:       960px;
+$break-sm:       600px;
+
+//Unit helpers:
+$pixel: 'px';
+$percent: '%';
+
+//Helper variables:
+
+//TEXT:
+$font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40;
+$font-weights: bold bolder normal lighter;
+$text-align: left right center start end;
+
+$cursors: default none pointer move help;
+
+$transformations: uppercase lowercase none capitalize full-width;
+
+//BOX MODEL:
+$percentage-sizes: 10 20 25 30 33 40 50 60 66 70 75 80 90 100;
+$positions: absolute relative fixed;
+$boxing: 0 2 5 10 15 20 25 30 35 40 45 50;
+
+//Display:
+$displays: inline inline-block inline-flex flex list-item block none;
+
+//Overflow:
+$overflow: auto hidden scroll;
+
+//Floats:
+$floats: left right none;
+
+//LOADING SPINNER:
+$spinnerColour: #000; //IE alternative.
+$green: #008744;
+$blue: #0057e7;
+$red: #d62d20;
+$yellow: #ffa700;
+$white: #eee;
+
+// scaling... any units
+$width: 40px;

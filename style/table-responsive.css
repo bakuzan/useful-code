@@ -1,0 +1,272 @@
+﻿/** TABLE STUFF **/
+.table, .card-table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  background-color: #fff; }
+  .table thead tr, .card-table thead tr, .table tbody tr, .card-table tbody tr, .table tfoot tr, .card-table tfoot tr {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .table thead tr td, .card-table thead tr td, .table thead tr th, .card-table thead tr th, .table tbody tr td, .card-table tbody tr td, .table tbody tr th, .card-table tbody tr th, .table tfoot tr td, .card-table tfoot tr td, .table tfoot tr th, .card-table tfoot tr th {
+      padding: 1.6rem;
+      vertical-align: top;
+      border-top: 0;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .table thead tr th, .card-table thead tr th, .table tbody tr th, .card-table tbody tr th, .table tfoot tr th, .card-table tfoot tr th {
+      text-align: right; }
+  .table thead tr:nth-child(even), .card-table thead tr:nth-child(even), .table tbody tr:nth-child(even), .card-table tbody tr:nth-child(even), .table tfoot tr:nth-child(even), .card-table tfoot tr:nth-child(even) {
+    background-color: #eee; }
+  .table thead > tr > th, .card-table thead > tr > th {
+    font-weight: 400;
+    background-color: #EF8D21;
+    color: #FFF;
+    vertical-align: bottom;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+  .table > caption + thead > tr:first-child > th, .card-table > caption + thead > tr:first-child > th,
+  .table > caption + thead > tr:first-child > td,
+  .card-table > caption + thead > tr:first-child > td,
+  .table > caption + thead > tr:first-child > th,
+  .card-table > caption + thead > tr:first-child > th,
+  .table tbody .table > caption + thead > tr:first-child > th,
+  .card-table tbody .card-table > caption + thead > tr:first-child > th,
+  .table tfoot .table > caption + thead > tr:first-child > th,
+  .card-table tfoot .card-table > caption + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > th,
+  .card-table > colgroup + thead > tr:first-child > th,
+  .table > colgroup + thead > tr:first-child > td,
+  .card-table > colgroup + thead > tr:first-child > td,
+  .table > colgroup + thead > tr:first-child > th,
+  .card-table > colgroup + thead > tr:first-child > th,
+  .table tbody .table > colgroup + thead > tr:first-child > th,
+  .card-table tbody .card-table > colgroup + thead > tr:first-child > th,
+  .table tfoot .table > colgroup + thead > tr:first-child > th,
+  .card-table tfoot .card-table > colgroup + thead > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > th,
+  .card-table > thead:first-child > tr:first-child > th,
+  .table > thead:first-child > tr:first-child > td,
+  .card-table > thead:first-child > tr:first-child > td,
+  .table > thead:first-child > tr:first-child > th,
+  .card-table > thead:first-child > tr:first-child > th,
+  .table tbody .table > thead:first-child > tr:first-child > th,
+  .card-table tbody .card-table > thead:first-child > tr:first-child > th,
+  .table tfoot .table > thead:first-child > tr:first-child > th,
+  .card-table tfoot .card-table > thead:first-child > tr:first-child > th {
+    border-top: 0; }
+  .table > tbody + tbody, .card-table > tbody + tbody {
+    border-top: 1px solid rgba(0, 0, 0, 0.12); }
+  .table .table, .card-table .table, .table .card-table, .card-table .card-table {
+    background-color: #fff; }
+  .table .no-border, .card-table .no-border {
+    border: 0; }
+
+.table-condensed > thead > tr > th,
+.table-condensed > thead > tr > td,
+.table .table-condensed > thead > tr > th,
+.card-table .table-condensed > thead > tr > th,
+.table-condensed > tbody > tr > th,
+.table-condensed > tbody > tr > td,
+.table .table-condensed > tbody > tr > th,
+.card-table .table-condensed > tbody > tr > th,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tfoot > tr > td,
+.table .table-condensed > tfoot > tr > th,
+.card-table .table-condensed > tfoot > tr > th {
+  padding: 0.8rem; }
+
+.table-bordered {
+  border: 0; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td,
+  .table .table-bordered > thead > tr > th,
+  .card-table .table-bordered > thead > tr > th,
+  .table-bordered > tbody > tr > th,
+  .table-bordered > tbody > tr > td,
+  .table .table-bordered > tbody > tr > th,
+  .card-table .table-bordered > tbody > tr > th,
+  .table-bordered > tfoot > tr > th,
+  .table-bordered > tfoot > tr > td,
+  .table .table-bordered > tfoot > tr > th,
+  .card-table .table-bordered > tfoot > tr > th {
+    border: 0;
+    border-bottom: 1px solid #e0e0e0; }
+  .table-bordered > thead > tr > th,
+  .table-bordered > thead > tr > td,
+  .table .table-bordered > thead > tr > th,
+  .card-table .table-bordered > thead > tr > th {
+    border-bottom-width: 2px; }
+
+.table-striped > tbody > tr:nth-child(odd) > td, .table .table-striped > tbody > tr:nth-child(odd) > th, .card-table .table-striped > tbody > tr:nth-child(odd) > th,
+.table-striped > tbody > tr:nth-child(odd) > th {
+  background-color: #f5f5f5; }
+
+.table-hover tbody > tr:hover td, .table-hover .table thead tbody > tr:hover th, .table thead .table-hover tbody > tr:hover th, .table-hover .card-table thead tbody > tr:hover th, .card-table thead .table-hover tbody > tr:hover th, .table-hover .table tbody > tr:hover tr th, .table .table-hover tbody > tr:hover tr th, .table-hover .card-table tbody > tr:hover tr th, .card-table .table-hover tbody > tr:hover tr th, .table-hover .table tfoot tbody > tr:hover th, .table tfoot .table-hover tbody > tr:hover th, .table-hover .card-table tfoot tbody > tr:hover th, .card-table tfoot .table-hover tbody > tr:hover th, .table-hover tbody > tr:hover th {
+  background-color: #ff5722;
+  color: #FFF; }
+
+.table-selected td, .table-selected .table thead tr th, .table thead tr .table-selected th, .table-selected .card-table thead tr th, .card-table thead tr .table-selected th, .table-selected .table tbody tr th, .table tbody tr .table-selected th, .table-selected .card-table tbody tr th, .card-table tbody tr .table-selected th, .table-selected .table tfoot tr th, .table tfoot tr .table-selected th, .table-selected .card-table tfoot tr th, .card-table tfoot tr .table-selected th {
+  background-color: #ff5722;
+  color: #FFF; }
+
+@media screen and (max-width: 768px) {
+  .table-responsive-vertical > .table, .table-responsive-vertical > .card-table {
+    margin-bottom: 0;
+    background-color: transparent; }
+    .table-responsive-vertical > .table > thead, .table-responsive-vertical > .card-table > thead,
+    .table-responsive-vertical > .table > tfoot,
+    .table-responsive-vertical > .card-table > tfoot {
+      display: none; }
+    .table-responsive-vertical > .table > tbody, .table-responsive-vertical > .card-table > tbody {
+      display: block; }
+      .table-responsive-vertical > .table > tbody > tr, .table-responsive-vertical > .card-table > tbody > tr {
+        display: block;
+        border: 1px solid #e0e0e0;
+        border-radius: 2px;
+        margin-bottom: 1.6rem; }
+        .table-responsive-vertical > .table > tbody > tr > td, .table-responsive-vertical > .card-table > tbody > tr > td, .table-responsive-vertical > .table > tbody > tr > th, .table-responsive-vertical > .card-table > tbody > tr > th {
+          display: block;
+          position: relative;
+          margin-left: 17%;
+          vertical-align: middle;
+          text-align: right; }
+        .table-responsive-vertical > .table > tbody > tr > td[data-title]:before, .table-responsive-vertical > .card-table > tbody > tr > td[data-title]:before, .table-responsive-vertical > .table > tbody > tr > th[data-title]:before, .table-responsive-vertical > .card-table > tbody > tr > th[data-title]:before {
+          content: attr(data-title);
+          float: left;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20%;
+          min-width: 120px;
+          height: 70px;
+          padding: 15px;
+          margin-left: -20%;
+          font-size: inherit;
+          font-weight: 400;
+          background-color: #EF8D21;
+          color: #FFF;
+          text-align: left;
+          border-right: 1px solid rgba(0, 0, 0, 0.12);
+          box-sizing: border-box; }
+  .table-responsive-vertical > .table-bordered {
+    border: 0; }
+    .table-responsive-vertical > .table-bordered > tbody > tr > td, .table .table-responsive-vertical > .table-bordered > tbody > tr > th, .card-table .table-responsive-vertical > .table-bordered > tbody > tr > th {
+      border: 0;
+      border-bottom: 1px solid #e0e0e0; }
+    .table-responsive-vertical > .table-bordered > tbody > tr > td:last-child, .table .table-responsive-vertical > .table-bordered > tbody > tr > th:last-child, .card-table .table-responsive-vertical > .table-bordered > tbody > tr > th:last-child {
+      border-bottom: 0; }
+  .table-responsive-vertical > .table-striped > tbody > tr > td, .table .table-responsive-vertical > .table-striped > tbody > tr > th, .card-table .table-responsive-vertical > .table-striped > tbody > tr > th,
+  .table-responsive-vertical > .table-striped > tbody > tr:nth-child(odd) {
+    background-color: #fff; }
+  .table-responsive-vertical > .table-striped > tbody > tr > td:nth-child(odd), .table .table-responsive-vertical > .table-striped > tbody > tr > th:nth-child(odd), .card-table .table-responsive-vertical > .table-striped > tbody > tr > th:nth-child(odd) {
+    background-color: #f5f5f5; }
+  .table-responsive-vertical > .table-hover > tbody tr:hover td, .table-responsive-vertical > .table-hover > tbody .table thead tr:hover th, .table-responsive-vertical > .table-hover > tbody .card-table thead tr:hover th, .table .table-responsive-vertical > .table-hover > tbody tr:hover th, .card-table .table-responsive-vertical > .table-hover > tbody tr:hover th, .table-responsive-vertical > .table-hover > tbody .table tfoot tr:hover th, .table-responsive-vertical > .table-hover > tbody .card-table tfoot tr:hover th {
+    background-color: #E91E63; }
+  .table-responsive-vertical .table-selected td, .table-responsive-vertical .table-selected .table thead tr th, .table thead tr .table-responsive-vertical .table-selected th, .table-responsive-vertical .table-selected .card-table thead tr th, .card-table thead tr .table-responsive-vertical .table-selected th, .table-responsive-vertical .table-selected .table tbody tr th, .table tbody tr .table-responsive-vertical .table-selected th, .table-responsive-vertical .table-selected .card-table tbody tr th, .card-table tbody tr .table-responsive-vertical .table-selected th, .table-responsive-vertical .table-selected .table tfoot tr th, .table tfoot tr .table-responsive-vertical .table-selected th, .table-responsive-vertical .table-selected .card-table tfoot tr th, .card-table tfoot tr .table-responsive-vertical .table-selected th {
+    background-color: #E91E63;
+    color: #FFF; } }
+
+/** 
+ *  Used for tables within containers...e.g. Cards.
+ */
+.card-table {
+  font-size: 16px; }
+  .card-table thead tr, .card-table tbody tr, .card-table tfoot tr {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+    .card-table thead tr td, .card-table thead tr th, .card-table tbody tr td, .card-table tbody tr th, .card-table tfoot tr td, .card-table tfoot tr th {
+      padding: 0.4rem;
+      vertical-align: top;
+      border-top: 0;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    .card-table thead tr th, .card-table tbody tr th, .card-table tfoot tr th {
+      text-align: left; }
+  .card-table thead > tr > th {
+    font-weight: 400;
+    background-color: #FFF;
+    color: #000;
+    vertical-align: bottom;
+    border: none; }
+  .card-table tbody tr th {
+    color: #FFF; }
+  .card-table tbody tr:first-child th {
+    background-color: #2196F3; }
+
+@media screen and (max-width: 768px) {
+  .table-responsive-vertical .card-table tbody {
+    display: inline-flex;
+    width: 100%; }
+    .table-responsive-vertical .card-table tbody tr {
+      display: inline-block;
+      width: 55%; }
+      .table-responsive-vertical .card-table tbody tr td[data-title]:before, .table-responsive-vertical .card-table tbody tr th[data-title]:before {
+        height: 31px;
+        width: 17%;
+        min-width: 17%;
+        font-weight: 400;
+        background-color: #FFF;
+        color: #000;
+        padding: 5px;
+        border-right: 0; }
+    .table-responsive-vertical .card-table tbody tr:nth-child(even) {
+      width: 45%; }
+      .table-responsive-vertical .card-table tbody tr:nth-child(even) th {
+        margin-left: 0; }
+      .table-responsive-vertical .card-table tbody tr:nth-child(even) td, .table-responsive-vertical .card-table tbody tr:nth-child(even) th {
+        margin-left: 0; }
+      .table-responsive-vertical .card-table tbody tr:nth-child(even) td[data-title]:before, .table-responsive-vertical .card-table tbody tr:nth-child(even) th[data-title]:before {
+        content: none;
+        background-color: #eee; } }
+
+/** Paging controls **/
+.paging-controls {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  text-align: center; }
+  .paging-controls md-input-container {
+    position: absolute;
+    left: 0; }
+  .paging-controls .paging-controls-buttons {
+    position: absolute;
+    right: 0; }
+    .paging-controls .paging-controls-buttons .md-button {
+      min-width: 60px;
+      padding: 0;
+      margin: 0; }
+
+tr {
+  opacity: 1; }
+
+tr.ng-enter {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  opacity: 0;
+  display: none; }
+
+tr.ng-enter.ng-enter-active {
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  opacity: 1; }
+
+/** Paging controls END **/
+/** TABLE END **/
+.negative {
+  background-color: #F44336;
+  color: #FFF; }
+
+.positive {
+  background-color: #4CAF50; }
