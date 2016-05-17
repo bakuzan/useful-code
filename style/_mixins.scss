@@ -23,6 +23,7 @@
        -moz-backface-visibility: $back;
             backface-visibility: $back;
 }
+/* popout-shadow will create lots of repeated code. */
 @mixin popout-shadow() {
     @include box-shadow(0, 2px, 100px, rgba(0, 0, 0, 0.2));
     @include transition(all 250ms);
@@ -34,4 +35,9 @@
     } @else {
         #{$property}: #000;
     }
+}
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+  #{$key}:    -moz-calc(#{$value});
+  #{$key}:         calc(#{$value});
 }

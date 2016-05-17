@@ -19,7 +19,6 @@ $table-cell-padding:                    1.6rem;
 $table-condensed-cell-padding:          $table-cell-padding/2;
 $table-super-condensed-cell-padding:    $table-condensed-cell-padding/2;
 
-
 $table-bg:                      #fff;
 $table-bg-accent:               #f5f5f5;
 $table-bg-hover:                $accent-color;
@@ -46,7 +45,7 @@ $percent: '%';
 //Helper variables:
 
 //TEXT:
-$font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40;
+$font-sizes: 10 12 14 15 16 18 20 22 24 25 28 30 32 34 35 36 38 40 42;
 $font-weights: bold bolder normal lighter;
 $text-align: left right center start end;
 
@@ -63,7 +62,7 @@ $boxing: 0 2 5 10 15 20 25 30 35 40 45 50;
 $displays: inline inline-block inline-flex flex list-item block none;
 
 //Overflow:
-$overflow: auto hidden scroll;
+$overflow: auto hidden scroll visible;
 
 //Floats:
 $floats: left right none;

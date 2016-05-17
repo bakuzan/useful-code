@@ -108,3 +108,9 @@
     left: 50%;
     @include transform(translateX(-50%) translateY(-50%));
 }
+
+.center-vertically {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+}

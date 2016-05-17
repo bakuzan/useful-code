@@ -37,3 +37,7 @@
         text-transform: #{$transform};
     }
 }
+
+.word-per-line {
+    word-spacing: 10000px;
+}
