@@ -13,6 +13,10 @@
         service.lowerFirstLetter = function(string) {
             return string.charAt(0).toLowerCase() + string.slice(1);
         }
+		
+		service.getRandomArbitrary = function (min, max) {
+            return Math.random() * (max - min) + min;
+        }
 
         //Find object using attr of value in array.
         service.findWithAttr = function(array, attr, value) {
