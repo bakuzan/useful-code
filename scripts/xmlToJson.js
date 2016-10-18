@@ -15,7 +15,7 @@ function xmlToJson(xml) {
 		obj = xml.nodeValue;
 	}
 
-	if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === 3) {
+	if (xml.hasChildNodes() && xml.childNodes.length === 1 && xml.childNodes[0].nodeType === TEXT_NODE_TYPE) {
 		obj = xml.childNodes[0].nodeValue;
 	}
 	else if (xml.hasChildNodes()) {
