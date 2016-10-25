@@ -1,12 +1,11 @@
 function buildSelectorPath(el) {
-  var path = [],
-	  nodeName = el.nodeName.toLowerCase();
+  var path = [];
   while (
-    (nodeName != 'html') && 
+    (el.nodeName.toLowerCase() != 'html') && 
     (el = el.parentNode) &&
     path.unshift(el.nodeName.toLowerCase() + 
       (el.id ? '#' + el.id : '') + 
       (el.className ? '.' + el.className.replace(/\s+/g, ".") : ''))
   );
-  return `${path.join(" > ")} > ${nodeName}`;
+  return `${path.join(" > ")} > ${el.nodeName.toLowerCase()}`;
 }
