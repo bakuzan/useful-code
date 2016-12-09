@@ -1,4 +1,6 @@
-<style class="cp-pen-styles">svg {
+<svg xmlns="http://www.w3.org/2000/svg" id="logo" viewBox="-20 -60 80 80" preserveAspectRatio="xMinYMin" width="50px" height="50px">
+      <defs>
+        <style type="text/css">svg {
   position: relative;
   width: 50px;
   height: 50px;
@@ -6,25 +8,27 @@
   padding: 8px;
   border-radius: 20%;
   box-sizing: border-box;
-  cursor: default;
 }
-svg:not(:hover) > .hideshow {
+svg:not(:hover) &gt; .hideshow {
   animation: hideshow infinite 8s linear;
   opacity: 0;
 }
-svg:not(:hover) > .hideshow:nth-child(2) {
+svg:not(:hover) &gt; .hideshow:nth-child(2) {
   animation-delay: 2s;
 }
-svg:not(:hover) > .hideshow:nth-child(3) {
+svg:not(:hover) &gt; .hideshow:nth-child(3) {
   animation-delay: 4s;
 }
-svg:not(:hover) > .hideshow:nth-child(4) {
+svg:not(:hover) &gt; .hideshow:nth-child(4) {
   animation-delay: 6s;
 }
-svg:hover > #word {
+svg:hover {
+  background-color: #533674;
+}
+svg:hover &gt; #word {
   opacity: 1;
 }
-svg:hover > .letter {
+svg:hover &gt; .letter {
   opacity: 0 !important;
 }
 
@@ -69,20 +73,20 @@ svg:hover > .letter {
   }
 }
 </style>
-<svg id="logo" viewBox="-20 -60 80 80" preserveAspectRatio="xMaxYMax meet" xmlns="http://www.w3.org/2000/svg">
-  <text class="letter hideshow" id="jay" x="2" y="-0">
-    J
-  </text>
-  <text class="letter hideshow" id="you" x="-5" y="-0">
-    U
-  </text>
-  <text class="letter hideshow" id="are" x="-6" y="-0">
-    R
-  </text>
-  <text class="letter hideshow" id="eye" x="9" y="-0">
-    I
-  </text>
-  <text id="word" class="diagonal" x="-0" y="-0">
-    JURI
-  </text>
-</svg>
+      </defs>
+      <text class="letter hideshow" id="jay" x="2" y="-0">
+        J
+      </text>
+      <text class="letter hideshow" id="you" x="-5" y="-0">
+        U
+      </text>
+      <text class="letter hideshow" id="are" x="-6" y="-0">
+        R
+      </text>
+      <text class="letter hideshow" id="eye" x="9" y="-0">
+        I
+      </text>
+      <text id="word" class="diagonal" x="-0" y="-0">
+        JURI
+      </text>
+    </svg>
