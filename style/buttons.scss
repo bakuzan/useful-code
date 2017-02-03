@@ -1,0 +1,30 @@
+.button {
+  display: flex;
+  min-width: 100px;
+  min-height: 25px;
+  background-color: $white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover {
+    background-color: darken($white, $darken-percentage);
+  }
+  &.rounded {
+    border-radius: 5px;
+  }
+  &.depress {
+    box-shadow: 0 0 5px $onyx;
+    &:active {
+      box-shadow: inset 0px 0px 5px $onyx;
+    }
+  }
+}
+
+.button.primary {
+  background-color: $primary-background;
+  color: $primary-contrast-colour;
+  &:hover {
+    background-color: darken($primary-background, $darken-percentage);
+  }
+}
